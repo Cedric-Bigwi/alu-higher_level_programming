@@ -1,2 +1,2 @@
 #!/usr/bin/python3
-print("".join([chr(i) if i % 2 == 0 else chr(i - 32) for i in range(122, 96, -1)]), end="")
+print(*[chr(c).lower() if i % 2 == 0 else chr(c).upper() for i, c in enumerate(range(122, 96, -1))], sep="", end="")
