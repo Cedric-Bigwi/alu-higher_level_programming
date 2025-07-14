@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 
 
-"""Module defining a Student class with optional attribute filtering for JSON."""
+"""Module defining a Student class with
+optional attribute filtering for JSON."""
 
 
 class Student:
