@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+
 def pascal_triangle(n):
     """Returns Pascal's triangle as list of lists."""
     if n <= 0:
