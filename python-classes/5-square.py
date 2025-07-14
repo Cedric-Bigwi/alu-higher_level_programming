@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Module for Square with print method."""
 
+
 class Square:
     """Defines a square that can be printed."""
 
@@ -33,4 +34,3 @@ class Square:
         else:
             for _ in range(self.__size):
                 print("#" * self.__size)
-
