@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 
 
-"""Module for returning dictionary representation of object for JSON serialization."""
+"""Module for returning dictionary representation of object
+for JSON serialization."""
 
 
 def class_to_json(obj):
