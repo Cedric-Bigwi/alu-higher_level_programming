@@ -68,12 +68,10 @@ class Rectangle:
 
     def __del__(self):
         """Print message when an instance is deleted.
-    
         Decrement instance count.
         """
         print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
-
 
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
