@@ -1,6 +1,9 @@
 #!/usr/bin/python3
 
 
+"""Module defining a Student class with public attributes and JSON conversion."""
+
+
 class Student:
     """Defines a student with public attributes."""
 

@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 
 
+"""Script that adds all arguments to a Python list and saves them in a file."""
+
 import sys
 import os
 load_from_json_file = __import__("6-load_from_json_file").load_from_json_file

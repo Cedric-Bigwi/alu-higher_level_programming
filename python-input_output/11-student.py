@@ -1,6 +1,9 @@
 #!/usr/bin/python3
 
 
+"""Module defining a Student class with save and reload methods for JSON."""
+
+
 class Student:
     """Defines a student with methods for serialization and reloading."""
 
