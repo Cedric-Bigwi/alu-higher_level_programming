@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""Defines a Rectangle class with customizable print symbol and instance counting."""
+"""Defines a Rectangle class with customizable print symbol
+and instance counting."""
 
 
 class Rectangle:
@@ -9,7 +10,8 @@ class Rectangle:
     print_symbol = "#"
 
     def __init__(self, width=0, height=0):
-        """Initialize rectangle width and height, increment instance count."""
+        """Initialize rectangle width and height, 
+        increment instance count."""
         self.width = width
         self.height = height
         Rectangle.number_of_instances += 1
@@ -67,6 +69,7 @@ class Rectangle:
         return "Rectangle({}, {})".format(self.__width, self.__height)
 
     def __del__(self):
-        """Print message when an instance is deleted, decrement instance count."""
+        """Print message when an instance is deleted, 
+        decrement instance count."""
         print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
