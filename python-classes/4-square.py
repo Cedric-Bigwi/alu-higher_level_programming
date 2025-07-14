@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Module for Square with getter and setter."""
 
+
 class Square:
     """Defines a square with getter/setter for size."""
 
@@ -25,4 +26,3 @@ class Square:
     def area(self):
         """Return area of the square."""
         return self.__size ** 2
-
