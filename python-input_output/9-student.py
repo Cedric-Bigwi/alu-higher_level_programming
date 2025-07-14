@@ -1,8 +1,6 @@
 #!/usr/bin/python3
 
 
-
-
 class Student:
     """Defines a student with public attributes."""
 
