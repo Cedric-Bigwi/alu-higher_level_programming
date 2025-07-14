@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """Module 7-base_geometry.py"""
+
+
 class BaseGeometry:
     """Base class with area and validator."""
     def area(self):
