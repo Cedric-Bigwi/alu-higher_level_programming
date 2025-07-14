@@ -22,4 +22,3 @@ class Student:
         """Replaces attributes of Student from dictionary."""
         for key, value in json.items():
             setattr(self, key, value)
-
