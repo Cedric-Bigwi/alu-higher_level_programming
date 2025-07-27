@@ -1,14 +1,17 @@
 #!/usr/bin/python3
-"""POST with a letter as query param to a JSON API"""
+"""Sends a POST request to search for a user and displays the id and name or an error message."""
+
 import requests
 import sys
-q = "" if len(sys.argv) == 1 else sys.argv[1]
-res = requests.post("http://0.0.0.0:5000/search_user", data={"q": q})
-try:
-    js = res.json()
-    if js:
-        print("[{}] {}".format(js.get("id"), js.get("name")))
-    else:
-        print("No result")
-except ValueError:
-    print("Not a valid JSON")
+
+if __name__ == "__main__":
+    q = sys.argv[1] if len(sys.argv) > 1 else ""
+    r = requests.post("http://0.0.0.0:5000/search_user", data={'q': q})
+    try:
+        data = r.json()
+        if data:
+            print(f"[{data.get('id')}] {data.get('name')}")
+        else:
+            print("No result")
+    except ValueError:
+        print("Not a valid JSON")

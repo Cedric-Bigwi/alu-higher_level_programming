@@ -1,9 +1,13 @@
 #!/usr/bin/python3
-"""Displays error code if >= 400"""
+"""Displays response body or error code for HTTP status >= 400 using requests."""
+
 import requests
 import sys
-res = requests.get(sys.argv[1])
-if res.status_code >= 400:
-    print("Error code:", res.status_code)
-else:
-    print(res.text)
+
+if __name__ == "__main__":
+    url = sys.argv[1]
+    r = requests.get(url)
+    if r.status_code >= 400:
+        print(f"Error code: {r.status_code}")
+    else:
+        print(r.text)

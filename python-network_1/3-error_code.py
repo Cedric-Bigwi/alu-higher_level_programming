@@ -1,10 +1,13 @@
 #!/usr/bin/python3
-"""Handles HTTPError exceptions"""
-import urllib.request
-import urllib.error
+"""Handles HTTP errors and displays the response body or error code."""
+
+from urllib import request, error
 import sys
-try:
-    with urllib.request.urlopen(sys.argv[1]) as response:
-        print(response.read().decode("utf-8"))
-except urllib.error.HTTPError as e:
-    print("Error code:", e.code)
+
+if __name__ == "__main__":
+    url = sys.argv[1]
+    try:
+        with request.urlopen(url) as response:
+            print(response.read().decode('utf-8'))
+    except error.HTTPError as e:
+        print(f"Error code: {e.code}")

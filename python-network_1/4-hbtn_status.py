@@ -1,7 +1,11 @@
 #!/usr/bin/python3
-"""Fetches status using requests"""
+"""Fetches and displays status from the specified URL using requests."""
+
 import requests
-res = requests.get("https://alu-intranet.hbtn.io/status")
-print("Body response:")
-print("\t- type:", type(res.text))
-print("\t- content:", res.text)
+
+if __name__ == "__main__":
+    url = "http://0.0.0.0:5050/status"
+    r = requests.get(url)
+    print("Body response:")
+    print(f"\t- type: {type(r.text)}")
+    print(f"\t- content: {r.text}")
