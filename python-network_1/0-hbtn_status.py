@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 """Fetches http://0.0.0.0:5050/status and prints formatted response"""
 import urllib.request
+"""This script fetches a given URL and displays a formatted response."""
+
 with urllib.request.urlopen("http://0.0.0.0:5050/status") as response:
     body = response.read()
     print("Body response:")
