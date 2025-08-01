@@ -1,0 +1,8 @@
+>>> matrix_divided([[1, 2], [3, 4]], 2)
+[[0.5, 1.0], [1.5, 2.0]]
+>>> matrix_divided([[9, 3]], 3)
+[[3.0, 1.0]]
+>>> matrix_divided([[9, 3]], 0)
+Traceback (most recent call last):
+    ...
+ZeroDivisionError: division by zero
