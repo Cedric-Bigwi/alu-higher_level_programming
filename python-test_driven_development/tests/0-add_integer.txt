@@ -14,9 +14,9 @@ try:
 except Exception as e:
     print(e)
 
->>> add_integer(2, 3)
+>>> add_integer(2)
 5
->>> add_integer(100.5, -2)
+>>> add_integer(100.5)
 98
 >>> add_integer(2)
 100
