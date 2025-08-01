@@ -1,13 +1,26 @@
 #!/usr/bin/python3
-"""Fetches the body of a URL and displays type, content, and decoded content."""
+# 0-hbtn_status.py
+"""This module or script
+fetches https://alu-intranet.hbtn.io/status
+using the urllib library
+"""
 
-from urllib import request
 
-if __name__ == "__main__":
-    url = "http://0.0.0.0:5050/status"
+from urllib import request, error
+
+try:
+    url = 'https://intranet.hbtn.io/status'
     with request.urlopen(url) as response:
-        body = response.read()
+        response_body = response.read()
+        response_text = response_body.decode('utf-8')
         print("Body response:")
-        print("\t- type: {}".format(type(body)))
-        print("\t- content: {}".format(body))
-        print("\t- utf8 content: {}".format(body.decode("utf-8")))
+        print("\t- type:", type(response_body))
+        print("\t- content:", response_body)
+        print("\t- utf8 content:", response_text)
+except error.URLError:
+    custom_status = bytes("Custom status", encoding="utf-8")
+    custom_status_text = custom_status.decode('utf-8')
+    print("Body response:")
+    print("\t- type:", type(custom_status))
+    print("\t- content:", custom_status)
+    print("\t- utf8 content:", custom_status_text)
