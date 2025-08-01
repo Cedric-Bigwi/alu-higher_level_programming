@@ -24,9 +24,12 @@ def main():
     )
     cur = db.cursor()
 
-    # SQL injection-prone way required by the project (but with LIKE BINARY for case sensitivity)
-    query = "SELECT * FROM states WHERE name LIKE BINARY '{}' ORDER BY id ASC"\
-        .format(state_name)
+    # Required use of .format() and case-sensitive match (LIKE BINARY)
+    query = (
+        "SELECT * FROM states "
+        "WHERE name LIKE BINARY '{}' "
+        "ORDER BY id ASC"
+    ).format(state_name)
     cur.execute(query)
 
     rows = cur.fetchall()
