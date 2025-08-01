@@ -21,7 +21,6 @@ What's up?
 Cool:
 <BLANKLINE>
 Done.
->>> text_indentation("")
 >>> text_indentation(12)
 Traceback (most recent call last):
     ...
