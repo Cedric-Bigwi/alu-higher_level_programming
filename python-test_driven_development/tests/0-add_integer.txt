@@ -1,15 +1,10 @@
-#!/usr/bin/python3
-add_integer = __import__('0-add_integer').add_integer
-
-print(add_integer(1, 2))
-print(add_integer(100, -2))
-print(add_integer(2))
-print(add_integer(100.3, -2))
-try:
-    print(add_integer(4, "School"))
-except Exception as e:
-    print(e)
-try:
-    print(add_integer(None))
-except Exception as e:
-    print(e)
+>>> add_integer(2, 3)
+5
+>>> add_integer(100.5, -2)
+98
+>>> add_integer(2)
+100
+>>> add_integer("hello", 1)
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer
