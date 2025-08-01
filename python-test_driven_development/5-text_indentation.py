@@ -1,16 +1,33 @@
 #!/usr/bin/python3
-"""
-Module for text_indentation function
-Prints text with two new lines after ., ?, and :
+"""_summary_
+Write a function that output a square of text with two new lines
 """
 
+
 def text_indentation(text):
-    """Prints text with indentation"""
+    """_summary_
+
+    Args:
+        text (_str_): _description: A text_
+
+    Raises:
+        TypeError: _If text is not a string_
+    """
+
     if not isinstance(text, str):
         raise TypeError("text must be a string")
-    for delim in ".?:":
-        text = text.replace(delim, delim + "\n\n")
-    lines = [line.strip() for line in text.split("\n")]
-    for line in lines:
-        if line:
-            print(line)
+
+    index = 0
+    while index < len(text) and text[index] == ' ':
+        index += 1
+
+    while index < len(text):
+        print(text[index], end="")
+        if text[index] == "\n" or text[index] in ".?:":
+            if text[index] in ".?:":
+                print("\n")
+            index += 1
+            while index < len(text) and text[index] == ' ':
+                index += 1
+            continue
+        index += 1
