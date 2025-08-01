@@ -1,11 +1,10 @@
 #!/usr/bin/python3
-"""Deletes all State objects with names containing the letter 'a' from database"""
+"""Delete all State objects whose names contain the letter 'a' (case-insensitive)."""
 
 import sys
 from sqlalchemy import create_engine, func
 from sqlalchemy.orm import sessionmaker
 from model_state import Base, State
-
 
 if __name__ == "__main__":
     username = sys.argv[1]
@@ -20,7 +19,6 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    # Use case-insensitive match for 'a' in name
     states_to_delete = session.query(State).filter(
         func.lower(State.name).like('%a%')
     ).all()
