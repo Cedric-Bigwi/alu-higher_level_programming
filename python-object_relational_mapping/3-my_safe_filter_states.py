@@ -1,8 +1,11 @@
 #!/usr/bin/python3
 """
 Takes a state name as argument and displays all values in the states table
-of hbtn_0e_0_usa where name matches the argument (safe from SQL injection).
-Usage: ./3-my_safe_filter_states.py <username> <password> <db_name> <state_name>
+of hbtn_0e_0_usa where name matches the argument.
+This version is safe from SQL injection.
+
+Usage:
+    ./3-my_safe_filter_states.py <username> <password> <db_name> <state_name>
 """
 
 import MySQLdb
