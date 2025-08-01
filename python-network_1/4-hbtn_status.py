@@ -1,11 +1,13 @@
 #!/usr/bin/python3
-"""Fetches and displays status from the specified URL using requests."""
-
+"""__summary__
+- Write a Python script that
+- fetches https://intranet.hbtn.io/status.
+"""
 import requests
 
+
 if __name__ == "__main__":
-    url = "http://0.0.0.0:5050/status"
-    r = requests.get(url)
+    r = requests.get("https://intranet.hbtn.io/status")
     print("Body response:")
-    print(f"\t- type: {type(r.text)}")
-    print(f"\t- content: {r.text}")
+    print("\t- type: {}".format(type(r.text)))
+    print("\t- content: {}".format(r.text))
