@@ -4,6 +4,7 @@ Module for add_integer function
 Performs integer addition with type checking
 """
 
+
 def add_integer(a, b=98):
     """Add two integers or floats, casted to integers"""
     if not isinstance(a, (int, float)):
