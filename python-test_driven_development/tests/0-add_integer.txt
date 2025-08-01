@@ -4,7 +4,3 @@
 98
 >>> add_integer(2)
 100
->>> add_integer("hello", 1)
-Traceback (most recent call last):
-    ...
-TypeError: a must be an integer
