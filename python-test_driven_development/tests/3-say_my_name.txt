@@ -1,9 +1,25 @@
-say_my_name = __import__('3-say_my_name').say_my_name
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+
 >>> say_my_name("John", "Doe")
 My name is John Doe
+
 >>> say_my_name("Bob")
 My name is Bob 
->>> say_my_name(1, "Smith")
-Traceback (most recent call last):
-    ...
-TypeError: first_name must be a string
+
+>>> try:
+...     say_my_name("Bob", 12)
+... except Exception as e:
+...     print(e)
+last_name must be a string
+
+>>> try:
+...     say_my_name(12, "Lenon")
+... except Exception as e:
+...     print(e)
+first_name must be a string
+
+>>> try:
+...     say_my_name()
+... except Exception as e:
+...     print(e)
+TypeError: say_my_name() missing 2 required positional arguments: 'first_name' and 'last_name'
