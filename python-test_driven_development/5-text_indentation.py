@@ -1,33 +1,25 @@
 #!/usr/bin/python3
-"""_summary_
-Write a function that output a square of text with two new lines
-"""
+"""A function that prints text with 2 new lines after each '.', '?' and ':'"""
 
 
 def text_indentation(text):
-    """_summary_
-
-    Args:
-        text (_str_): _description: A text_
-
-    Raises:
-        TypeError: _If text is not a string_
-    """
-
+    """Prints a text with 2 new lines after '.', '?' and ':'"""
     if not isinstance(text, str):
         raise TypeError("text must be a string")
 
-    index = 0
-    while index < len(text) and text[index] == ' ':
-        index += 1
+    delimiters = ['.', '?', ':']
+    i = 0
+    length = len(text)
 
-    while index < len(text):
-        print(text[index], end="")
-        if text[index] == "\n" or text[index] in ".?:":
-            if text[index] in ".?:":
-                print("\n")
-            index += 1
-            while index < len(text) and text[index] == ' ':
-                index += 1
+    while i < length:
+        print_char = text[i]
+        print(print_char, end='')
+
+        if print_char in delimiters:
+            print('\n')
+            i += 1
+            # Skip following spaces
+            while i < length and text[i] == ' ':
+                i += 1
             continue
-        index += 1
+        i += 1
