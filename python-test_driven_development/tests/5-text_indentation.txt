@@ -3,16 +3,23 @@
 Holberton School
 >>> text_indentation("Holberton.School")
 Holberton.
+<BLANKLINE>
 School
 >>> text_indentation("Holberton. School? How are you: John")
 Holberton.
+<BLANKLINE>
 School?
+<BLANKLINE>
 How are you:
+<BLANKLINE>
 John
 >>> text_indentation("Hello.  What's up? Cool: Done.")
 Hello.
+<BLANKLINE>
 What's up?
+<BLANKLINE>
 Cool:
+<BLANKLINE>
 Done.
 >>> text_indentation("")
 >>> text_indentation(12)
